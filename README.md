@@ -1,0 +1,1 @@
+# 2026.2_T02_G3_ProjetoStreamingVideo_Entrega_02
