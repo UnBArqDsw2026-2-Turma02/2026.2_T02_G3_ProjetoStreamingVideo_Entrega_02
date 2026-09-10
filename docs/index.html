@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    http-equiv="X-UA-Compatible"
+    content="IE=edge,chrome=1"
+  >
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Documentação do projeto StreamingVideo — Engenharia de Software, UnB."
+  >
+
+  <meta name="theme-color" content="#6d28d9">
+
+  <title>StreamingVideo | Documentação</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"
+  >
+
+  <style>
+    :root {
+      --purple-950: #2e1065;
+      --purple-900: #3b0764;
+      --purple-800: #4c1d95;
+      --purple-700: #6d28d9;
+      --purple-600: #7c3aed;
+      --purple-500: #8b5cf6;
+      --purple-100: #ede9fe;
+      --purple-50: #f7f5ff;
+
+      --text-color: #463e54;
+      --menu-text-color: #5f6f82;
+      --title-color: #2f2937;
+      --line-color: #e9e3f4;
+      --white: #ffffff;
+
+      --theme-color: var(--purple-700);
+      --sidebar-width: 290px;
+      --menu-font-size: 0.91rem;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: var(--text-color);
+
+      background:
+        radial-gradient(
+          circle at 88% 8%,
+          rgba(139, 92, 246, 0.08),
+          transparent 25rem
+        ),
+        var(--white);
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      color: var(--purple-950);
+      background: #ddd2ff;
+    }
+
+    /* =========================
+       MENU LATERAL
+    ========================= */
+
+    .sidebar {
+      width: var(--sidebar-width);
+      padding: 20px 18px 28px;
+
+      border-right: 1px solid var(--line-color);
+      background: rgba(255, 255, 255, 0.97);
+
+      box-shadow: 14px 0 40px rgba(64, 30, 112, 0.05);
+    }
+
+    .sidebar::before {
+      position: absolute;
+      inset: 0 0 auto;
+
+      height: 5px;
+
+      content: "";
+
+      background: linear-gradient(
+        90deg,
+        var(--purple-800),
+        var(--purple-500)
+      );
+    }
+
+    /* =========================
+       LOGO
+    ========================= */
+
+    .app-name {
+      margin: 4px 0 22px;
+    }
+
+    .app-name-link {
+      display: block;
+
+      width: 100%;
+      height: 118px;
+
+      background:
+        transparent
+        url("./assets/logo.png")
+        center / contain
+        no-repeat;
+
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+
+    /* =========================
+       NAVEGAÇÃO LATERAL
+    ========================= */
+
+    .sidebar-nav {
+      padding: 0 2px 30px;
+
+      color: var(--menu-text-color);
+
+      font-size: var(--menu-font-size);
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .sidebar-nav ul {
+      margin: 0;
+      padding-left: 0;
+    }
+
+    .sidebar-nav ul ul {
+      margin: 8px 0 12px 12px;
+      padding-left: 12px;
+
+      border-left: 1px solid var(--purple-100);
+    }
+
+    .sidebar-nav li {
+      margin-top: 7px !important;
+      margin-bottom: 7px !important;
+
+      color: var(--menu-text-color) !important;
+
+      font-size: var(--menu-font-size) !important;
+      font-weight: 400 !important;
+      line-height: 1.4 !important;
+    }
+
+    /*
+      Mantém todos os textos internos com
+      o mesmo tamanho, cor e peso.
+    */
+
+    .sidebar-nav li,
+    .sidebar-nav li.collapse,
+    .sidebar-nav li.open,
+    .sidebar-nav li > a,
+    .sidebar-nav li > p,
+    .sidebar-nav li > span,
+    .sidebar-nav li > strong {
+      color: var(--menu-text-color) !important;
+
+      font-size: var(--menu-font-size) !important;
+      font-weight: 400 !important;
+      line-height: 1.4 !important;
+    }
+
+    .sidebar-nav a,
+    .sidebar-nav p {
+      display: block;
+
+      margin: 0;
+      padding: 8px 11px;
+
+      border-radius: 9px;
+
+      color: var(--menu-text-color) !important;
+      font-weight: 400 !important;
+
+      text-decoration: none;
+
+      transition:
+        color 0.16s ease,
+        background-color 0.16s ease,
+        transform 0.16s ease;
+    }
+
+    /*
+      Padroniza Relatórios, SubEquipes,
+      Modelagem Dinâmica e Modelagem Estática.
+    */
+
+    .sidebar-nav > ul > li > ul li.collapse,
+    .sidebar-nav > ul > li > ul li.open {
+      color: var(--menu-text-color) !important;
+
+      font-size: var(--menu-font-size) !important;
+      font-weight: 400 !important;
+      line-height: 1.4 !important;
+    }
+
+    .sidebar-nav > ul > li > ul li.collapse > a,
+    .sidebar-nav > ul > li > ul li.collapse > p,
+    .sidebar-nav > ul > li > ul li.collapse > span,
+    .sidebar-nav > ul > li > ul li.collapse > strong,
+    .sidebar-nav > ul > li > ul li.open > a,
+    .sidebar-nav > ul > li > ul li.open > p,
+    .sidebar-nav > ul > li > ul li.open > span,
+    .sidebar-nav > ul > li > ul li.open > strong {
+      color: var(--menu-text-color) !important;
+
+      font-size: var(--menu-font-size) !important;
+      font-weight: 400 !important;
+      line-height: 1.4 !important;
+    }
+
+    /* Mantém somente Base em roxo e negrito */
+
+    .sidebar-nav > ul > li > strong,
+    .sidebar-nav > ul > li > p > strong {
+      color: var(--purple-900) !important;
+      font-weight: 700 !important;
+    }
+
+    /* Efeito ao passar o mouse */
+
+    .sidebar-nav a:hover {
+      color: var(--purple-700) !important;
+      background: var(--purple-50);
+      transform: translateX(2px);
+    }
+
+    /* Item selecionado */
+
+    .sidebar-nav li.active > a,
+    .sidebar-nav li.active > a:hover,
+    .sidebar-nav li.active > a:visited {
+      color: var(--white) !important;
+
+      background: linear-gradient(
+        135deg,
+        var(--purple-700),
+        var(--purple-600)
+      );
+
+      box-shadow: 0 6px 16px rgba(109, 40, 217, 0.2);
+
+      font-weight: 600 !important;
+    }
+
+    .sidebar-nav li.active > a span,
+    .sidebar-nav li.active > a:hover span,
+    .sidebar-nav li.active > a:visited span {
+      color: var(--white) !important;
+      background: transparent;
+      font-weight: 600 !important;
+    }
+
+    /* =========================
+       CONTEÚDO PRINCIPAL
+    ========================= */
+
+    .content {
+      left: var(--sidebar-width);
+      padding-top: 24px;
+    }
+
+    .markdown-section {
+      max-width: 980px;
+      padding: 44px 52px 80px;
+    }
+
+    /* =========================
+       TÍTULOS DO CONTEÚDO
+    ========================= */
+
+    .markdown-section h1,
+    .markdown-section h2,
+    .markdown-section h3,
+    .markdown-section h4,
+    .markdown-section h5,
+    .markdown-section h6 {
+      color: var(--title-color) !important;
+
+      font-weight: 600;
+      letter-spacing: normal;
+    }
+
+    .markdown-section h1 {
+      margin: 0 0 1rem;
+      padding: 0;
+
+      font-size: 2rem;
+      line-height: 1.3;
+    }
+
+    .markdown-section h2 {
+      margin-top: 2rem;
+      padding: 0;
+
+      border: 0;
+
+      font-size: 1.5rem;
+    }
+
+    .markdown-section h3 {
+      margin-top: 1.5rem;
+      font-size: 1.25rem;
+    }
+
+    .markdown-section h4 {
+      margin-top: 1.25rem;
+      font-size: 1.1rem;
+    }
+
+    /*
+      Mantém os títulos cinza-escuro,
+      mesmo ao passar o mouse.
+    */
+
+    .markdown-section h1 a,
+    .markdown-section h2 a,
+    .markdown-section h3 a,
+    .markdown-section h4 a,
+    .markdown-section h5 a,
+    .markdown-section h6 a,
+    .markdown-section h1 a:hover,
+    .markdown-section h2 a:hover,
+    .markdown-section h3 a:hover,
+    .markdown-section h4 a:hover,
+    .markdown-section h5 a:hover,
+    .markdown-section h6 a:hover,
+    .markdown-section h1 a:visited,
+    .markdown-section h2 a:visited,
+    .markdown-section h3 a:visited,
+    .markdown-section h4 a:visited,
+    .markdown-section h5 a:visited,
+    .markdown-section h6 a:visited {
+      color: var(--title-color) !important;
+      text-decoration: none !important;
+    }
+
+    .markdown-section h1 .anchor,
+    .markdown-section h2 .anchor,
+    .markdown-section h3 .anchor,
+    .markdown-section h4 .anchor,
+    .markdown-section h5 .anchor,
+    .markdown-section h6 .anchor {
+      color: var(--title-color) !important;
+    }
+
+    .markdown-section h1 span,
+    .markdown-section h2 span,
+    .markdown-section h3 span,
+    .markdown-section h4 span,
+    .markdown-section h5 span,
+    .markdown-section h6 span {
+      color: inherit !important;
+    }
+
+    /* =========================
+       TEXTOS
+    ========================= */
+
+    .markdown-section p,
+    .markdown-section li {
+      color: var(--text-color);
+    }
+
+    /* =========================
+       LINKS DA BIBLIOGRAFIA
+       E LINKS DO CONTEÚDO
+    ========================= */
+
+    .markdown-section p a,
+    .markdown-section li a,
+    .markdown-section blockquote a,
+    .markdown-section td a {
+      color: var(--purple-700) !important;
+
+      font-weight: 600;
+
+      text-decoration: underline;
+      text-decoration-color: #c4b5fd;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+
+    .markdown-section p a:hover,
+    .markdown-section li a:hover,
+    .markdown-section blockquote a:hover,
+    .markdown-section td a:hover {
+      color: var(--purple-900) !important;
+      text-decoration-color: var(--purple-600);
+    }
+
+    /* =========================
+       CITAÇÕES
+    ========================= */
+
+    .markdown-section blockquote {
+      margin: 1.5rem 0;
+      padding: 15px 20px;
+
+      border: 0;
+      border-left: 4px solid var(--purple-600);
+      border-radius: 0 12px 12px 0;
+
+      color: var(--purple-900);
+      background: var(--purple-50);
+    }
+
+    .markdown-section blockquote p {
+      margin: 0;
+      color: inherit;
+    }
+
+    /* =========================
+       CÓDIGOS
+    ========================= */
+
+    .markdown-section code {
+      margin: 0 2px;
+      padding: 0.18em 0.42em;
+
+      border-radius: 6px;
+
+      color: var(--purple-800);
+      background: var(--purple-50);
+
+      font-size: 0.88em;
+    }
+
+    .markdown-section pre {
+      border: 1px solid #dcd3ec;
+      border-radius: 14px;
+
+      background: #211832;
+
+      box-shadow: 0 12px 28px rgba(46, 16, 101, 0.1);
+    }
+
+    .markdown-section pre > code {
+      color: #f7f3ff;
+      background: transparent;
+    }
+
+    /* =========================
+       TABELAS
+    ========================= */
+
+    .markdown-section table {
+      display: table;
+
+      width: 100%;
+      margin: 1.5rem 0;
+
+      overflow: hidden;
+
+      border: 1px solid var(--line-color);
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 14px;
+
+      box-shadow: 0 8px 24px rgba(70, 40, 110, 0.05);
+    }
+
+    .markdown-section th {
+      color: var(--white);
+      background: var(--purple-800);
+      font-weight: 650;
+    }
+
+    .markdown-section th,
+    .markdown-section td {
+      padding: 12px 16px;
+
+      border: 0;
+      border-bottom: 1px solid var(--line-color);
+
+      text-align: left;
+    }
+
+    .markdown-section tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .markdown-section tr:nth-child(even) td {
+      background: #fbfaff;
+    }
+
+    /* =========================
+       IMAGENS
+    ========================= */
+
+    .markdown-section img {
+      border: 1px solid var(--line-color);
+      border-radius: 14px;
+
+      box-shadow: 0 14px 34px rgba(61, 32, 98, 0.1);
+    }
+
+    /* =========================
+       PAGINAÇÃO
+    ========================= */
+
+    .pagination-item-title,
+    .pagination-item-label {
+      color: var(--purple-700) !important;
+    }
+
+    /* =========================
+       BARRA DE CARREGAMENTO
+    ========================= */
+
+    .progress {
+      height: 3px;
+
+      background: linear-gradient(
+        90deg,
+        var(--purple-700),
+        var(--purple-500)
+      );
+    }
+
+    /* =========================
+       LINK DO GITHUB
+    ========================= */
+
+    .github-corner svg {
+      color: var(--white);
+      fill: var(--purple-800);
+    }
+
+    /* =========================
+       BOTÃO DO MENU NO CELULAR
+    ========================= */
+
+    .sidebar-toggle {
+      border-radius: 0 12px 12px 0;
+
+      background: var(--white);
+
+      box-shadow: 3px 3px 14px rgba(46, 16, 101, 0.12);
+    }
+
+    .sidebar-toggle span {
+      background-color: var(--purple-700);
+    }
+
+    /* =========================
+       RESPONSIVIDADE
+    ========================= */
+
+    @media (max-width: 768px) {
+      .markdown-section {
+        padding: 32px 24px 64px;
+      }
+
+      .markdown-section h1 {
+        font-size: 2rem;
+      }
+
+      .markdown-section table {
+        display: block;
+        overflow-x: auto;
+      }
+
+      .github-corner {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <script>
+    window.$docsify = {
+      loadSidebar: true,
+
+      name: "StreamingVideo",
+
+      repo: "https://github.com/UnBArqDsw2026-2-Turma02/2026.2_T02_G3_ProjetoStreamingVideo_Entrega_02",
+
+      sidebarDisplayLevel: 1,
+
+      auto2top: true,
+
+      pagination: {
+        previousText: "Anterior",
+        nextText: "Próximo",
+        crossChapter: true
+      }
+    };
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+</body>
+</html>
