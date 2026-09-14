@@ -1,24 +1,32 @@
+# Pull Request
 
-Describe the big picture of your changes here to communicate to the maintainers why we should accept this pull request. If it fixes a bug or resolves a feature request, be sure to link to that issue.
+## Descrição
 
-## Types of changes
+Descreva o que este PR entrega e por que ele é necessário. Se resolve uma issue, referencie com `Closes #<numero>`.
 
-What types of changes does your code introduce to <repo_name>?
-_Put an `x` in the boxes that apply_
+**Subequipe responsável:** SubEquipe_0X
 
-- [ ] Bugfix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation Update (if none of the other choices apply)
+## Tipo de mudança
+
+_Marque com um `x` as opções que se aplicam_
+
+- [ ] Modelagem estática (diagramas UML)
+- [ ] Modelagem dinâmica (diagramas UML)
+- [ ] Documentação (relatórios, participações, pontos de vista)
+- [ ] Correção de conteúdo/erro em artefato já existente
+- [ ] Iniciativa extra
+- [ ] Outro (descreva abaixo)
 
 ## Checklist
 
-_Put an `x` in the boxes that apply. You can also fill these out after creating the PR. If you're unsure about any of them, don't hesitate to ask. We're here to help! This is simply a reminder of what we are going to look for before merging your code._
+_Marque com um `x` as opções que se aplicam. Você também pode preenchê-las depois de abrir o PR._
 
-- [ ] I have read the CONTRIBUTING.md doc.
-- [ ] I have added necessary documentation (if appropriate).
-- [ ] Any dependent changes have been merged and published in downstream modules.
+- [ ] Segui as diretrizes do [CONTRIBUTING.md](../CONTRIBUTING.md)
+- [ ] Os artefatos seguem a notação UML e os padrões definidos em `docs/Base/1.Modelagem.md`
+- [ ] O quadro de participações/contribuições (`1.2.ParticipacoesModelagem.md`) foi atualizado, se necessário
+- [ ] A documentação no GitHub Pages (`docs/Base/Relatórios/SubEquipe_0X`) foi atualizada, se necessário
+- [ ] Referenciei a literatura/base teórica usada, quando aplicável
 
-## Further comments
+## Comentários adicionais
 
-If this is a relatively large or complex change, kick off the discussion by explaining why you chose the solution you did and what alternatives you considered, etc...
+Se a mudança for grande ou complexa, explique aqui as decisões tomadas, alternativas consideradas e pontos que merecem atenção na revisão.
