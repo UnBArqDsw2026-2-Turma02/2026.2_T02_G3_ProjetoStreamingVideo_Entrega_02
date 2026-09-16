@@ -1,0 +1,16 @@
+A elaboração do diagrama de classes foi conduzida de forma colaborativa pelos três integrantes da equipe, utilizando uma abordagem fundamentada no levantamento, discussão e consolidação dos requisitos estruturais do sistema. Por meio de reuniões presenciais, o grupo realizou uma análise de domínio voltada especificamente para o fluxo de Video on Demand (VOD). O objetivo foi mapear a estrutura estática do software, compartilhando conhecimentos prévios para identificar as entidades essenciais do serviço de streaming — como Usuários, Catálogo, Mídias, Assinaturas e Sessões de Reprodução —, bem como seus respectivos atributos, métodos e relacionamentos (associações, agregações e heranças). Essa etapa de alinhamento técnico permitiu traduzir as regras de negócio do VOD em uma modelagem assertiva, garantindo uma visão padronizada da arquitetura e das responsabilidades de cada classe no sistema.
+
+A elaboração do diagrama de classes foi conduzida de forma colaborativa pelos três integrantes da equipe, com foco na estruturação do fluxo de um sistema de Video on Demand (VOD). A abordagem adotada baseou-se no levantamento, discussão e consolidação das informações arquiteturais e do domínio do software.
+
+Por meio de reuniões presenciais, o grupo compartilhou conhecimentos prévios sobre plataformas de streaming com o objetivo de abstrair e identificar as entidades fundamentais do sistema. O foco das discussões foi mapear a estrutura estática do software, definindo com assertividade as principais classes (como Usuario, Assinatura, Catalogo, Midia e SessaoDeReproducao), seus respectivos atributos, métodos e as regras de multiplicidade.
+
+Essa etapa iterativa permitiu analisar as especificidades do fluxo de VOD, estabelecendo os relacionamentos adequados entre os objetos — tais como associações, heranças (por exemplo, Midia generalizando Filme e Episodio) e composições. Dessa forma, consolidou-se uma visão coesa e técnica do software a partir das diferentes perspectivas dos integrantes, garantindo que o diagrama reflita com precisão o gerenciamento do catálogo, o controle de acesso e o rastreamento da reprodução de vídeo."
+
+Dicas adicionais para o seu diagrama VOD
+Como o foco de vocês é o fluxo de VOD, garanta que essas três áreas principais estejam bem representadas no diagrama de classes que vocês vão desenhar:
+
+Gestão de Acesso e Perfil: Classes como Conta, Perfil (para contas com múltiplos usuários, como na Netflix), e Assinatura (status do pagamento, plano ativo).
+
+Organização do Catálogo (Herança e Composição): Uma classe abstrata ou superclasse Midia ou ConteudoVOD, que passa seus atributos (título, sinopse, classificação indicativa) para as subclasses Filme e Serie (que por sua vez se relaciona com Temporada e Episodio).
+
+Fluxo de Reprodução (O "On Demand"): Uma classe como SessaoDeReproducao ou HistoricoDeVisualizacao é crucial. Ela deve ligar o Perfil à Midia, guardando atributos importantes do VOD como timestampParada (onde o usuário parou de assistir) e qualidadeDeVideo.
