@@ -5,13 +5,9 @@ Esta seção reúne os registros das reuniões realizadas pela equipe 2 durante 
 ****Link para a playlist das gravações:**** [Acessar playlist](https://www.youtube.com/playlist?list=PLJmRMHC-Q6d0)
 
 - [Ata 01 — Alinhamento e planejamento](#ata-de-reunião-01)
-
 - [Ata 02 — Diagrama de Classes](#ata-de-reunião-02)
-
 - [Ata 03 — Diagrama de Componentes](#ata-de-reunião-03)
-
 - [Ata 04 — Diagrama de Atividades](#ata-de-reunião-04)
-
 - [Ata 05 — A definir](#ata-de-reunião-05)
 
 ---
@@ -31,31 +27,19 @@ Esta seção reúne os registros das reuniões realizadas pela equipe 2 durante 
 ### 2. Participantes
 
 | Membro | Presença |
-
 |---|---|
-
 | Enzo Menali | ✅ |
-
 | Geovanna Umbelino | ✅ |
-
 | Lucas Oliveira | ✅ |
-
 | Paulo Vitor Gomes | ✅ |
-
-
-
 
 
 ### 3. Pauta da Reunião
 
 - Alinhamento inicial da equipe para a etapa de modelagem;
-
 - Discussão sobre os tipos de diagramas que seriam desenvolvidos;
-
 - Pesquisa sobre os diagramas e suas aplicações no projeto;
-
 - Definição inicial da organização do trabalho;
-
 - Análise dos artefatos já produzidos na entrega anterior.
 
 ### 4. Tópicos Discutidos
@@ -71,11 +55,8 @@ A equipe discutiu diferentes possibilidades de modelagem e definiu os principais
 Foram definidos, inicialmente:
 
 - ****Diagrama de Classes****, para representar a estrutura estática e os principais elementos do domínio;
-
 - ****Diagrama de Componentes****, para representar a organização estrutural dos principais componentes e suas dependências;
-
 - ****Diagrama de Atividades****, para representar fluxos e comportamentos do sistema;
-
 - Um quarto artefato de modelagem, a ser definido posteriormente pela equipe.
 
 #### 4.3. Pesquisa e Fundamentação
@@ -87,11 +68,8 @@ Também foram considerados artefatos produzidos anteriormente, como ****Rich Pic
 ### 5. Decisões
 
 - Desenvolvimento de diferentes diagramas para representar perspectivas complementares do sistema;
-
 - Utilização dos artefatos da entrega anterior como apoio para a modelagem;
-
 - Construção dos diagramas de forma colaborativa durante reuniões da equipe;
-
 - Registro das reuniões para manter a rastreabilidade das decisões.
 
 ### 6. Observações
@@ -115,29 +93,19 @@ A reunião teve caráter de planejamento e alinhamento, servindo como base para 
 ### 2. Participantes
 
 | Membro | Presença |
-
 |---|---|
-
 | Enzo Menali | ✅ |
-
 | Geovanna Umbelino | ✅ |
-
 | Lucas Oliveira | ✅ |
-
 | Paulo Vitor Gomes | ✅ |
 
 ### 3. Pauta da Reunião
 
 - Revisão dos objetivos do Diagrama de Classes;
-
 - Identificação das principais classes do sistema;
-
 - Definição de atributos, operações e relacionamentos;
-
 - Definição de multiplicidades, generalizações e enumerações;
-
 - Elaboração do diagrama;
-
 - Construção da documentação associada.
 
 ### 4. Tópicos Discutidos
@@ -159,13 +127,9 @@ O diagrama foi construído de forma colaborativa e passou por ajustes durante a 
 ### 5. Decisões
 
 - Utilização de ****Conteúdo**** como classe abstrata;
-
 - Especialização de ****Conteúdo**** em ****Vídeo**** e ****Transmissão ao Vivo****;
-
 - Separação das responsabilidades de ****Usuário**** e ****Perfil****;
-
 - Representação de inscrições, comentários, reações e moderação como elementos próprios do domínio;
-
 - Uso de enumerações para representar estados, papéis, visibilidade e tipos de reação.
 
 ### 6. Resultado da Reunião
@@ -189,29 +153,19 @@ Ao final da reunião, foi obtida uma versão consolidada do ****Diagrama de Clas
 ### 2. Participantes
 
 | Membro | Presença |
-
 |---|---|
-
 | Enzo Menali | ✅ |
-
 | Geovanna Umbelino | ✅ |
-
 | Lucas Oliveira | ✅ |
-
 | Paulo Vitor Gomes | ✅ |
 
 ### 3. Pauta da Reunião
 
 - Revisão dos objetivos do Diagrama de Componentes;
-
 - Identificação dos principais componentes da solução;
-
 - Discussão das responsabilidades de cada componente;
-
 - Definição das dependências e interfaces;
-
 - Elaboração e organização visual do diagrama;
-
 - Documentação das decisões de modelagem.
 
 ### 4. Tópicos Discutidos
@@ -233,11 +187,8 @@ O diagrama foi construído e revisado coletivamente, com ajustes na organizaçã
 ### 5. Decisões
 
 - Manter o diagrama focado na visão estrutural dos componentes;
-
 - Evitar representar detalhes de classes ou fluxos internos que pertencem a outros modelos;
-
 - Evidenciar as dependências entre os principais componentes;
-
 - Utilizar a documentação para explicar as decisões que não ficam totalmente explícitas no diagrama.
 
 ### 6. Resultado da Reunião
@@ -261,29 +212,19 @@ Ao final da reunião, a equipe consolidou uma versão inicial do ****Diagrama de
 ### 2. Participantes
 
 | Membro | Presença |
-
 |---|---|
-
 | Enzo Menali | ✅ |
-
 | Geovanna Umbelino | ✅ |
-
 | Lucas Oliveira | ✅ |
-
 | Paulo Vitor Gomes | ✅ |
 
 ### 3. Pauta da Reunião
 
 - Definição do processo a ser representado;
-
 - Identificação das atividades e decisões do fluxo;
-
 - Definição de início, término e possíveis caminhos alternativos;
-
 - Construção do Diagrama de Atividades;
-
 - Revisão do fluxo;
-
 - Elaboração da documentação.
 
 ### 4. Tópicos Discutidos
@@ -307,11 +248,8 @@ O diagrama foi elaborado de forma colaborativa e revisado pela equipe para verif
 ### 5. Decisões
 
 - Representar apenas as atividades relevantes para o fluxo selecionado;
-
 - Utilizar decisões e caminhos alternativos quando necessários;
-
 - Manter coerência com os processos previamente modelados;
-
 - Evitar inserir detalhes estruturais que pertencem aos diagramas estáticos.
 
 ### 6. Resultado da Reunião
@@ -335,27 +273,18 @@ A reunião resultou em uma primeira versão do ****Diagrama de Atividades****, p
 ### 2. Participantes
 
 | Membro | Presença |
-
 |---|---|
-
 | Enzo Menali | ✅ |
-
 | Geovanna Umbelino | ✅ |
-
 | Lucas Oliveira | ✅ |
-
 | Paulo Vitor Gomes | ✅ |
 
 ### 3. Pauta da Reunião
 
 - Definição do último artefato de modelagem;
-
 - Discussão sobre a finalidade do modelo;
-
 - Elaboração do diagrama;
-
 - Revisão e documentação;
-
 - Revisão geral da entrega.
 
 ### 4. Tópicos Discutidos
@@ -375,7 +304,5 @@ Esta reunião ainda será realizada. Após a definição do último diagrama, es
 ## Histórico de Versão
 
 | Data | Versão | Descrição | Autor(es) | Revisores|
-
 |---|---|---|---| --- |
-
 | 17/09/2026 | 1.0 | Criação inicial da documentação das reuniões da etapa de modelagem. | [Enzo Menali](https://github.com/menali17), [Geovanna Umbelino](https://github.com/GeovannaUmbelino), [Lucas Oliveira](https://github.com/dev-LucasDpaula) e [Paulo Vitor Gomes](https://github.com/gpaulovit)             |   [Pedro Américo](https://github.com/dev-americo)  |
