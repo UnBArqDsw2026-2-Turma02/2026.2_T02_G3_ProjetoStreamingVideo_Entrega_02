@@ -32,6 +32,9 @@
     href="https://cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"
   >
 
+  <!-- Importa o componente de visualização de imagens/svg -->
+  <script src="assets/js/perfect_embed.js"></script>
+
   <style>
     :root {
       --purple-950: #2e1065;
@@ -639,7 +642,18 @@
         previousText: "Anterior",
         nextText: "Próximo",
         crossChapter: true
-      }
+      },
+
+      plugins: [
+        function (hook, vm) {
+          hook.doneEach(function () {
+            if (typeof bootstrap !== 'undefined') {
+              bootstrap();
+            }
+          });
+        }
+      ]
+
     };
   </script>
 
