@@ -5,9 +5,13 @@ Esta seção reúne os registros das reuniões realizadas pela equipe 2 durante 
 ****Link para a playlist das gravações:**** [Acessar playlist](https://www.youtube.com/playlist?list=PLJmRMHC-Q6d0)
 
 - [Ata 01 — Alinhamento e planejamento](#ata-de-reunião-01)
+
 - [Ata 02 — Diagrama de Classes](#ata-de-reunião-02)
+
 - [Ata 03 — Diagrama de Componentes](#ata-de-reunião-03)
+
 - [Ata 04 — Diagrama de Atividades](#ata-de-reunião-04)
+
 - [Ata 05 — A definir](#ata-de-reunião-05)
 
 ---
@@ -34,12 +38,19 @@ Esta seção reúne os registros das reuniões realizadas pela equipe 2 durante 
 | Paulo Vitor Gomes | ✅ |
 
 
+
+
+
 ### 3. Pauta da Reunião
 
 - Alinhamento inicial da equipe para a etapa de modelagem;
+
 - Discussão sobre os tipos de diagramas que seriam desenvolvidos;
+
 - Pesquisa sobre os diagramas e suas aplicações no projeto;
+
 - Definição inicial da organização do trabalho;
+
 - Análise dos artefatos já produzidos na entrega anterior.
 
 ### 4. Tópicos Discutidos
@@ -55,8 +66,11 @@ A equipe discutiu diferentes possibilidades de modelagem e definiu os principais
 Foram definidos, inicialmente:
 
 - ****Diagrama de Classes****, para representar a estrutura estática e os principais elementos do domínio;
+
 - ****Diagrama de Componentes****, para representar a organização estrutural dos principais componentes e suas dependências;
+
 - ****Diagrama de Atividades****, para representar fluxos e comportamentos do sistema;
+
 - Um quarto artefato de modelagem, a ser definido posteriormente pela equipe.
 
 #### 4.3. Pesquisa e Fundamentação
@@ -68,8 +82,11 @@ Também foram considerados artefatos produzidos anteriormente, como ****Rich Pic
 ### 5. Decisões
 
 - Desenvolvimento de diferentes diagramas para representar perspectivas complementares do sistema;
+
 - Utilização dos artefatos da entrega anterior como apoio para a modelagem;
+
 - Construção dos diagramas de forma colaborativa durante reuniões da equipe;
+
 - Registro das reuniões para manter a rastreabilidade das decisões.
 
 ### 6. Observações
@@ -102,10 +119,15 @@ A reunião teve caráter de planejamento e alinhamento, servindo como base para 
 ### 3. Pauta da Reunião
 
 - Revisão dos objetivos do Diagrama de Classes;
+
 - Identificação das principais classes do sistema;
+
 - Definição de atributos, operações e relacionamentos;
+
 - Definição de multiplicidades, generalizações e enumerações;
+
 - Elaboração do diagrama;
+
 - Construção da documentação associada.
 
 ### 4. Tópicos Discutidos
@@ -127,9 +149,13 @@ O diagrama foi construído de forma colaborativa e passou por ajustes durante a 
 ### 5. Decisões
 
 - Utilização de ****Conteúdo**** como classe abstrata;
+
 - Especialização de ****Conteúdo**** em ****Vídeo**** e ****Transmissão ao Vivo****;
+
 - Separação das responsabilidades de ****Usuário**** e ****Perfil****;
+
 - Representação de inscrições, comentários, reações e moderação como elementos próprios do domínio;
+
 - Uso de enumerações para representar estados, papéis, visibilidade e tipos de reação.
 
 ### 6. Resultado da Reunião
@@ -153,19 +179,29 @@ Ao final da reunião, foi obtida uma versão consolidada do ****Diagrama de Clas
 ### 2. Participantes
 
 | Membro | Presença |
+
 |---|---|
+
 | Enzo Menali | ✅ |
+
 | Geovanna Umbelino | ✅ |
+
 | Lucas Oliveira | ✅ |
+
 | Paulo Vitor Gomes | ✅ |
 
 ### 3. Pauta da Reunião
 
 - Revisão dos objetivos do Diagrama de Componentes;
+
 - Identificação dos principais componentes da solução;
+
 - Discussão das responsabilidades de cada componente;
+
 - Definição das dependências e interfaces;
+
 - Elaboração e organização visual do diagrama;
+
 - Documentação das decisões de modelagem.
 
 ### 4. Tópicos Discutidos
@@ -187,8 +223,11 @@ O diagrama foi construído e revisado coletivamente, com ajustes na organizaçã
 ### 5. Decisões
 
 - Manter o diagrama focado na visão estrutural dos componentes;
+
 - Evitar representar detalhes de classes ou fluxos internos que pertencem a outros modelos;
+
 - Evidenciar as dependências entre os principais componentes;
+
 - Utilizar a documentação para explicar as decisões que não ficam totalmente explícitas no diagrama.
 
 ### 6. Resultado da Reunião
@@ -207,7 +246,7 @@ Ao final da reunião, a equipe consolidou uma versão inicial do ****Diagrama de
 
 ### 1. Gravação
 
-****Registro da reunião:**** [Acessar vídeo](INSERIR_LINK_DO_VIDEO_04)
+****Registro da reunião:**** [Acessar vídeo](https://www.youtube.com/watch?v=upC7Cf2dITU)
 
 ### 2. Participantes
 
@@ -221,10 +260,15 @@ Ao final da reunião, a equipe consolidou uma versão inicial do ****Diagrama de
 ### 3. Pauta da Reunião
 
 - Definição do processo a ser representado;
+
 - Identificação das atividades e decisões do fluxo;
+
 - Definição de início, término e possíveis caminhos alternativos;
+
 - Construção do Diagrama de Atividades;
+
 - Revisão do fluxo;
+
 - Elaboração da documentação.
 
 ### 4. Tópicos Discutidos
@@ -248,8 +292,11 @@ O diagrama foi elaborado de forma colaborativa e revisado pela equipe para verif
 ### 5. Decisões
 
 - Representar apenas as atividades relevantes para o fluxo selecionado;
+
 - Utilizar decisões e caminhos alternativos quando necessários;
+
 - Manter coerência com os processos previamente modelados;
+
 - Evitar inserir detalhes estruturais que pertencem aos diagramas estáticos.
 
 ### 6. Resultado da Reunião
@@ -260,15 +307,13 @@ A reunião resultou em uma primeira versão do ****Diagrama de Atividades****, p
 
 ## Ata de Reunião 05
 
-****Data:**** 17/09/2026  
-
-****Reunião nº:**** 05  
-
-****Assunto:**** A definir
+**Data:** 17/09/2026  
+**Reunião nº:** 05  
+**Assunto:** Elaboração e revisão do Diagrama de Sequência
 
 ### 1. Gravação
 
-****Registro da reunião:**** [Acessar vídeo](INSERIR_LINK_DO_VIDEO_05)
+**Registro da reunião:** [Acessar vídeo](https://www.youtube.com/watch?v=EXnYy4yXWaA)
 
 ### 2. Participantes
 
@@ -282,22 +327,112 @@ A reunião resultou em uma primeira versão do ****Diagrama de Atividades****, p
 ### 3. Pauta da Reunião
 
 - Definição do último artefato de modelagem;
-- Discussão sobre a finalidade do modelo;
-- Elaboração do diagrama;
-- Revisão e documentação;
+- Discussão sobre a finalidade do Diagrama de Sequência;
+- Definição do cenário a ser representado;
+- Identificação e validação dos participantes arquiteturais;
+- Elaboração do Diagrama de Sequência;
+- Revisão dos fluxos de sucesso e falha;
+- Definição dos fragmentos combinados `alt` e `par`;
+- Revisão da documentação;
 - Revisão geral da entrega.
 
 ### 4. Tópicos Discutidos
 
-Esta reunião ainda será realizada. Após a definição do último diagrama, esta seção deverá ser atualizada com os principais pontos discutidos, justificativas e decisões tomadas pela equipe.
+Durante a reunião, a equipe definiu que o último artefato de modelagem dinâmica seria o **Diagrama de Sequência**, utilizando como cenário principal **“Carregar e reproduzir um vídeo”**.
+
+Inicialmente, foi discutido o objetivo do modelo e seu nível de abstração. A equipe optou por representar as interações entre responsabilidades arquiteturais, sem transformar o diagrama em uma reprodução direta do código-fonte. Dessa forma, as mensagens foram descritas como abstrações arquiteturais, evitando a criação de métodos, classes ou participantes não confirmados nos artefatos anteriores.
+
+Foram definidos os seguintes participantes:
+
+- Usuário;
+- Shell e Roteamento;
+- Reprodução e Interações;
+- Recursos Compartilhados;
+- Servidor/API PeerTube;
+- PeerTube Player;
+- Entrega de Mídia HLS / P2P.
+
+Também foi reforçado que **Angular SPA** e **PeerTube Frontend** seriam utilizados apenas como agrupamentos visuais, e não como linhas de vida independentes.
+
+A equipe discutiu o fluxo principal desde a seleção do vídeo até o início da reprodução. O fluxo definido contempla:
+
+- seleção do vídeo pelo usuário;
+- navegação para a área de reprodução;
+- consulta dos dados necessários;
+- comunicação com a API do PeerTube;
+- preparação da página de reprodução;
+- configuração do PeerTube Player;
+- obtenção do manifesto HLS;
+- solicitação de reprodução;
+- obtenção dos recursos iniciais de mídia;
+- apresentação da reprodução ao usuário.
+
+Também foram discutidos os diferentes caminhos alternativos do cenário. Um ponto importante foi a diferenciação entre **falha na obtenção dos dados do vídeo** e **falha na obtenção da mídia**.
+
+No primeiro caso, a equipe definiu que uma falha impeditiva na obtenção dos dados deve encerrar aquela ocorrência do cenário, sem permitir que o fluxo alcance o PeerTube Player.
+
+Já no caso de falha na obtenção da mídia, foi mantida a possibilidade de recuperação, permitindo que o Player tente uma fonte alternativa antes de informar a indisponibilidade ao usuário.
+
+Outro ponto revisado foi a relação entre a obtenção do manifesto HLS e a solicitação de reprodução. A equipe optou por utilizar um fragmento `par`, pois não havia evidência suficiente para representar essas duas atividades como uma sequência obrigatória.
+
+Também foram definidos os caminhos de reprodução automática e reprodução manual, utilizando um fragmento `alt` para representar:
+
+- autoplay habilitado e aceito;
+- início manual por meio do controle Play.
+
+Por fim, a equipe revisou o diagrama completo, corrigiu os fragmentos combinados e iniciou a documentação do artefato, mantendo a coerência com o Diagrama de Componentes e com os demais modelos já produzidos na entrega.
 
 ### 5. Decisões
 
-**A preencher após a realização da reunião.**
+Durante a reunião, foram tomadas as seguintes decisões:
+
+1. Utilizar o **Diagrama de Sequência** como último artefato de modelagem da subequipe.
+
+2. Modelar o cenário **“Carregar e reproduzir um vídeo”**.
+
+3. Utilizar somente os participantes arquiteturais já consolidados nos artefatos anteriores.
+
+4. Manter **Angular SPA** e **PeerTube Frontend** apenas como agrupamentos visuais.
+
+5. Não representar contratos como `IPlayer`, `IPeerTubeREST` e `IStreamingMedia` como linhas de vida.
+
+6. Não incluir **Serviços Core** no cenário, por não haver interação necessária que justificasse sua participação.
+
+7. Utilizar mensagens em nível arquitetural, sem inventar métodos TypeScript ou detalhes internos de implementação.
+
+8. Representar a falha na obtenção dos dados por meio de um fragmento `alt`, encerrando o fluxo nesse ramo antes da participação do PeerTube Player.
+
+9. Utilizar um fragmento `par` para representar a obtenção do manifesto HLS e a solicitação de reprodução sem impor uma ordem sequencial obrigatória.
+
+10. Representar autoplay e início manual por meio de um fragmento `alt`.
+
+11. Representar a obtenção da mídia por meio de outro fragmento `alt`, separando o caminho de sucesso do caminho de falha.
+
+12. Manter o mecanismo de recuperação/fallback no caminho de falha da mídia.
+
+13. Evitar a inclusão de elementos fora do escopo, como autenticação, comentários, reações, pesquisa, filtros, transmissão ao vivo, codecs e detalhes internos de P2P.
+
+14. Utilizar o Diagrama de Componentes e os demais artefatos anteriores como base para manter a coerência arquitetural.
 
 ### 6. Resultado da Reunião
 
-**A preencher após a realização da reunião.**
+Ao final da reunião, a equipe concluiu a definição e a revisão do **Diagrama de Sequência — Carregar e reproduzir um vídeo**.
+
+O artefato passou a representar:
+
+- o fluxo principal de carregamento e reprodução;
+- a obtenção dos dados do vídeo;
+- a configuração do PeerTube Player;
+- a obtenção do manifesto HLS;
+- os caminhos de autoplay e reprodução manual;
+- a solicitação e obtenção da mídia;
+- o tratamento de falhas na obtenção dos dados;
+- o tratamento de falhas na obtenção da mídia;
+- o mecanismo de recuperação/fallback;
+- o encerramento correto dos fluxos de erro;
+- a utilização dos fragmentos `alt` e `par`.
+
+Após a revisão coletiva, o diagrama foi considerado coerente com os demais artefatos arquiteturais produzidos pela equipe e ficou definido como o último artefato de modelagem da Subequipe 02.
 
 ---
 
@@ -306,3 +441,4 @@ Esta reunião ainda será realizada. Após a definição do último diagrama, es
 | Data | Versão | Descrição | Autor(es) | Revisores|
 |---|---|---|---| --- |
 | 17/09/2026 | 1.0 | Criação inicial da documentação das reuniões da etapa de modelagem. | [Enzo Menali](https://github.com/menali17), [Geovanna Umbelino](https://github.com/GeovannaUmbelino), [Lucas Oliveira](https://github.com/dev-LucasDpaula) e [Paulo Vitor Gomes](https://github.com/gpaulovit)             |   [Pedro Américo](https://github.com/dev-americo)  |
+| 18/09/2026 | 1.1 | Adicionando os links dos vídeos. | [Enzo Menali](https://github.com/menali17), [Geovanna Umbelino](https://github.com/GeovannaUmbelino), [Lucas Oliveira](https://github.com/dev-LucasDpaula) e [Paulo Vitor Gomes](https://github.com/gpaulovit)             |   [Pedro Américo](https://github.com/dev-americo)  |
