@@ -24,17 +24,3 @@ O projeto do Grupo G3, desenvolvido na disciplina Arquitetura e Desenho de Softw
 O nosso objetivo da matéria é investigar esse domínio sob diferentes perspectivas de Arquitetura e Desenho de Software e, após isso, utilizando artefatos de análise, Engenharia Reversa, requisitos não funcionais, modelagem de processos e técnicas relacionadas ao uso de Inteligência Artificial Generativa, criaremos uma plataforma que une o melhor dos dois mundos, entre o YouTube e PeerTube.
 
 Como principal sistema open source de referência, o grupo selecionou o PeerTube, uma plataforma livre e descentralizada para hospedagem, distribuição e consumo de vídeos.
-
-## Screenshots da Segunda Entrega
-Adicione 2 ou mais screenshots em termos de artefatos realizados na entrega.
-
-## Há algo a ser executado?
-
-( ) SIM
-
-( ) NÃO
-
-Se SIM, insira um manual (ou um script) para auxiliar ainda mais os interessados na execução.
-
-## Informações Complementares 
-Quaisquer outras informações adicionais podem ser descritas nessa seção.

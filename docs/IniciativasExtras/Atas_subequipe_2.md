@@ -31,15 +31,10 @@ Esta seção reúne os registros das reuniões realizadas pela equipe 2 durante 
 ### 2. Participantes
 
 | Membro | Presença |
-
 |---|---|
-
 | Enzo Menali | ✅ |
-
 | Geovanna Umbelino | ✅ |
-
 | Lucas Oliveira | ✅ |
-
 | Paulo Vitor Gomes | ✅ |
 
 
@@ -115,15 +110,10 @@ A reunião teve caráter de planejamento e alinhamento, servindo como base para 
 ### 2. Participantes
 
 | Membro | Presença |
-
 |---|---|
-
 | Enzo Menali | ✅ |
-
 | Geovanna Umbelino | ✅ |
-
 | Lucas Oliveira | ✅ |
-
 | Paulo Vitor Gomes | ✅ |
 
 ### 3. Pauta da Reunião
@@ -256,20 +246,15 @@ Ao final da reunião, a equipe consolidou uma versão inicial do ****Diagrama de
 
 ### 1. Gravação
 
-****Registro da reunião:**** [Acessar vídeo](INSERIR_LINK_DO_VIDEO_04)
+****Registro da reunião:**** [Acessar vídeo](https://www.youtube.com/watch?v=upC7Cf2dITU)
 
 ### 2. Participantes
 
 | Membro | Presença |
-
 |---|---|
-
 | Enzo Menali | ✅ |
-
 | Geovanna Umbelino | ✅ |
-
 | Lucas Oliveira | ✅ |
-
 | Paulo Vitor Gomes | ✅ |
 
 ### 3. Pauta da Reunião
@@ -322,60 +307,138 @@ A reunião resultou em uma primeira versão do ****Diagrama de Atividades****, p
 
 ## Ata de Reunião 05
 
-****Data:**** 17/09/2026  
-
-****Reunião nº:**** 05  
-
-****Assunto:**** A definir
+**Data:** 17/09/2026  
+**Reunião nº:** 05  
+**Assunto:** Elaboração e revisão do Diagrama de Sequência
 
 ### 1. Gravação
 
-****Registro da reunião:**** [Acessar vídeo](INSERIR_LINK_DO_VIDEO_05)
+**Registro da reunião:** [Acessar vídeo](https://www.youtube.com/watch?v=EXnYy4yXWaA)
 
 ### 2. Participantes
 
 | Membro | Presença |
-
 |---|---|
-
 | Enzo Menali | ✅ |
-
 | Geovanna Umbelino | ✅ |
-
 | Lucas Oliveira | ✅ |
-
 | Paulo Vitor Gomes | ✅ |
 
 ### 3. Pauta da Reunião
 
 - Definição do último artefato de modelagem;
-
-- Discussão sobre a finalidade do modelo;
-
-- Elaboração do diagrama;
-
-- Revisão e documentação;
-
+- Discussão sobre a finalidade do Diagrama de Sequência;
+- Definição do cenário a ser representado;
+- Identificação e validação dos participantes arquiteturais;
+- Elaboração do Diagrama de Sequência;
+- Revisão dos fluxos de sucesso e falha;
+- Definição dos fragmentos combinados `alt` e `par`;
+- Revisão da documentação;
 - Revisão geral da entrega.
 
 ### 4. Tópicos Discutidos
 
-Esta reunião ainda será realizada. Após a definição do último diagrama, esta seção deverá ser atualizada com os principais pontos discutidos, justificativas e decisões tomadas pela equipe.
+Durante a reunião, a equipe definiu que o último artefato de modelagem dinâmica seria o **Diagrama de Sequência**, utilizando como cenário principal **“Carregar e reproduzir um vídeo”**.
+
+Inicialmente, foi discutido o objetivo do modelo e seu nível de abstração. A equipe optou por representar as interações entre responsabilidades arquiteturais, sem transformar o diagrama em uma reprodução direta do código-fonte. Dessa forma, as mensagens foram descritas como abstrações arquiteturais, evitando a criação de métodos, classes ou participantes não confirmados nos artefatos anteriores.
+
+Foram definidos os seguintes participantes:
+
+- Usuário;
+- Shell e Roteamento;
+- Reprodução e Interações;
+- Recursos Compartilhados;
+- Servidor/API PeerTube;
+- PeerTube Player;
+- Entrega de Mídia HLS / P2P.
+
+Também foi reforçado que **Angular SPA** e **PeerTube Frontend** seriam utilizados apenas como agrupamentos visuais, e não como linhas de vida independentes.
+
+A equipe discutiu o fluxo principal desde a seleção do vídeo até o início da reprodução. O fluxo definido contempla:
+
+- seleção do vídeo pelo usuário;
+- navegação para a área de reprodução;
+- consulta dos dados necessários;
+- comunicação com a API do PeerTube;
+- preparação da página de reprodução;
+- configuração do PeerTube Player;
+- obtenção do manifesto HLS;
+- solicitação de reprodução;
+- obtenção dos recursos iniciais de mídia;
+- apresentação da reprodução ao usuário.
+
+Também foram discutidos os diferentes caminhos alternativos do cenário. Um ponto importante foi a diferenciação entre **falha na obtenção dos dados do vídeo** e **falha na obtenção da mídia**.
+
+No primeiro caso, a equipe definiu que uma falha impeditiva na obtenção dos dados deve encerrar aquela ocorrência do cenário, sem permitir que o fluxo alcance o PeerTube Player.
+
+Já no caso de falha na obtenção da mídia, foi mantida a possibilidade de recuperação, permitindo que o Player tente uma fonte alternativa antes de informar a indisponibilidade ao usuário.
+
+Outro ponto revisado foi a relação entre a obtenção do manifesto HLS e a solicitação de reprodução. A equipe optou por utilizar um fragmento `par`, pois não havia evidência suficiente para representar essas duas atividades como uma sequência obrigatória.
+
+Também foram definidos os caminhos de reprodução automática e reprodução manual, utilizando um fragmento `alt` para representar:
+
+- autoplay habilitado e aceito;
+- início manual por meio do controle Play.
+
+Por fim, a equipe revisou o diagrama completo, corrigiu os fragmentos combinados e iniciou a documentação do artefato, mantendo a coerência com o Diagrama de Componentes e com os demais modelos já produzidos na entrega.
 
 ### 5. Decisões
 
-**A preencher após a realização da reunião.**
+Durante a reunião, foram tomadas as seguintes decisões:
+
+1. Utilizar o **Diagrama de Sequência** como último artefato de modelagem da subequipe.
+
+2. Modelar o cenário **“Carregar e reproduzir um vídeo”**.
+
+3. Utilizar somente os participantes arquiteturais já consolidados nos artefatos anteriores.
+
+4. Manter **Angular SPA** e **PeerTube Frontend** apenas como agrupamentos visuais.
+
+5. Não representar contratos como `IPlayer`, `IPeerTubeREST` e `IStreamingMedia` como linhas de vida.
+
+6. Não incluir **Serviços Core** no cenário, por não haver interação necessária que justificasse sua participação.
+
+7. Utilizar mensagens em nível arquitetural, sem inventar métodos TypeScript ou detalhes internos de implementação.
+
+8. Representar a falha na obtenção dos dados por meio de um fragmento `alt`, encerrando o fluxo nesse ramo antes da participação do PeerTube Player.
+
+9. Utilizar um fragmento `par` para representar a obtenção do manifesto HLS e a solicitação de reprodução sem impor uma ordem sequencial obrigatória.
+
+10. Representar autoplay e início manual por meio de um fragmento `alt`.
+
+11. Representar a obtenção da mídia por meio de outro fragmento `alt`, separando o caminho de sucesso do caminho de falha.
+
+12. Manter o mecanismo de recuperação/fallback no caminho de falha da mídia.
+
+13. Evitar a inclusão de elementos fora do escopo, como autenticação, comentários, reações, pesquisa, filtros, transmissão ao vivo, codecs e detalhes internos de P2P.
+
+14. Utilizar o Diagrama de Componentes e os demais artefatos anteriores como base para manter a coerência arquitetural.
 
 ### 6. Resultado da Reunião
 
-**A preencher após a realização da reunião.**
+Ao final da reunião, a equipe concluiu a definição e a revisão do **Diagrama de Sequência — Carregar e reproduzir um vídeo**.
+
+O artefato passou a representar:
+
+- o fluxo principal de carregamento e reprodução;
+- a obtenção dos dados do vídeo;
+- a configuração do PeerTube Player;
+- a obtenção do manifesto HLS;
+- os caminhos de autoplay e reprodução manual;
+- a solicitação e obtenção da mídia;
+- o tratamento de falhas na obtenção dos dados;
+- o tratamento de falhas na obtenção da mídia;
+- o mecanismo de recuperação/fallback;
+- o encerramento correto dos fluxos de erro;
+- a utilização dos fragmentos `alt` e `par`.
+
+Após a revisão coletiva, o diagrama foi considerado coerente com os demais artefatos arquiteturais produzidos pela equipe e ficou definido como o último artefato de modelagem da Subequipe 02.
 
 ---
 
 ## Histórico de Versão
 
 | Data | Versão | Descrição | Autor(es) | Revisores|
-
 |---|---|---|---| --- |
-
 | 17/09/2026 | 1.0 | Criação inicial da documentação das reuniões da etapa de modelagem. | [Enzo Menali](https://github.com/menali17), [Geovanna Umbelino](https://github.com/GeovannaUmbelino), [Lucas Oliveira](https://github.com/dev-LucasDpaula) e [Paulo Vitor Gomes](https://github.com/gpaulovit)             |   [Pedro Américo](https://github.com/dev-americo)  |
+| 18/09/2026 | 1.1 | Adicionando os links dos vídeos. | [Enzo Menali](https://github.com/menali17), [Geovanna Umbelino](https://github.com/GeovannaUmbelino), [Lucas Oliveira](https://github.com/dev-LucasDpaula) e [Paulo Vitor Gomes](https://github.com/gpaulovit)             |   [Pedro Américo](https://github.com/dev-americo)  |
